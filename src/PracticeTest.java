@@ -65,4 +65,22 @@ public class PracticeTest {
         assertEquals(4, actual);
     }
 
+    @Test
+    void testoddEvenDifference() {
+        // Arrange
+        HashMap<String, Integer> numbers = new HashMap<>();
+        numbers.put("a", 2);
+        numbers.put("b", 5);
+        numbers.put("c", 3);
+        numbers.put("d", 8);
+        numbers.put("e", 10);
+
+        // Act
+        int actual = Practice.oddEvenDifference(numbers);
+
+        // Assert
+        // there are 2 odd numbers and 3 even numbers so the difference should be 1
+        assertEquals(1, actual);
+
+    }
 }

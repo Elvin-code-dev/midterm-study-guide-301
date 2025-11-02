@@ -71,4 +71,25 @@ public class Practice {
         return count;
     }
 
+    // Find the difference between the how many odd and even numbers there are in:
+    // HashMap
+
+    public static int oddEvenDifference(HashMap<String, Integer> numbers) {
+        // our variables
+        int oddCount = 0;
+        int evenCount = 0;
+
+        // go through each number in the map
+        for (int number : numbers.values()) {
+            // check if it is even or odd
+            if (number % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+        // return the difference
+        return Math.abs(oddCount - evenCount);
+    }
+
 }
