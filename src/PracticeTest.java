@@ -50,4 +50,19 @@ public class PracticeTest {
 
     }
 
+    @Test
+    void testcountWordsByLength() {
+        // Arrange
+        HashSet<String> words = new HashSet<>(
+                Arrays.asList("cat", "dog", "elephant", "tiger", "lion", "bear", "zebra"));
+
+        // Act
+        int actual = Practice.countWordsByLength(words, 2, 5);
+
+        // Assert
+        // words longer than 2 and shorter than 5 are cat, dog, bear and lion so 4
+        // expected
+        assertEquals(4, actual);
+    }
+
 }

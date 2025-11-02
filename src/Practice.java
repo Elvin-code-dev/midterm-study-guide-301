@@ -53,4 +53,22 @@ public class Practice {
         return longestWord;
     }
 
+    // Count how many words are longer than n characters and shorter than m
+    // characters in: HashSet
+    public static int countWordsByLength(HashSet<String> words, int n, int m) {
+        // varible to hold the count
+        int count = 0;
+
+        // go through each word in the set
+        for (String word : words) {
+            // check if the word is longer then n and shorter than m
+            if (word.length() > n && word.length() < m) {
+                count++;
+            }
+
+        }
+        // return the count
+        return count;
+    }
+
 }
