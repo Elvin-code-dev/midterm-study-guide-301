@@ -35,4 +35,19 @@ public class PracticeTest {
 
     // TODO: Make tests for each problem you solve
 
+    @Test
+    void testlongestWordStartingCharacter() {
+        // Arrange
+        ArrayList<String> words = new ArrayList<>(
+                Arrays.asList("BMW", "Audi", "Acura", "Chevrolet", "Alfa Romeo", "Ford"));
+
+        // Act
+        String actual = Practice.longestWordStartingCharacter(words, 'A');
+        ;
+
+        // Assert
+        assertEquals("Alfa Romeo", actual);
+
+    }
+
 }
