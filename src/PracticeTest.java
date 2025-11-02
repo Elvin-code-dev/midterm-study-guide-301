@@ -83,4 +83,23 @@ public class PracticeTest {
         assertEquals(1, actual);
 
     }
+
+    @Test
+    void testSecondLargestKey() {
+        // Arrannge
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(1, "a");
+        map.put(3, "b");
+        map.put(2, "c");
+        map.put(5, "d");
+        map.put(4, "e");
+
+        // Act
+        int actual = Practice.secondLargestKey(map);
+
+        // Assert
+        // the largest key is 5 and the second largest is 4
+        assertEquals(4, actual);
+
+    }
 }

@@ -92,4 +92,31 @@ public class Practice {
         return Math.abs(oddCount - evenCount);
     }
 
+    // Find the second-largest number in:
+    // The keys of a HashMap
+
+    public static int secondLargestKey(HashMap<Integer, String> map) {
+        // varibles to track largest and second largest
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        // go through all of the keys in the map
+        for (int key : map.keySet()) {
+            // check if it is larger then the curreent largest
+            if (key > largest) {
+                // we want to update both
+                secondLargest = largest;
+                largest = key;
+                // check if it is larger than second largest but not equal to largest
+            } else if (key > secondLargest && key != largest) {
+                // update second largest
+                secondLargest = key;
+            }
+        }
+
+        // return the second largest found
+        return secondLargest;
+
+    }
+
 }
